@@ -15,6 +15,7 @@ body, html {
     font-size: 20px;
     font-weight: bold;
     text-shadow: #FFFFFF 3px 1px;
+    text-decoration: none;
 }
 
 #video {

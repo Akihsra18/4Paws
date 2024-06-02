@@ -1,50 +1,61 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from "react-router-dom";
 import logo from "../images/LogoColored.png"
 
 export default function NavBarComponent() {
   return (
     <>
-      <nav id="PawsNavbar" className="row g-0 navbar navbar-expand-lg navbar-expand-md fixed-top">
-        <div className="container-fluid col">
-          <Link to="/">
-          <img 
-            src={logo}
-            className="img-fluid" 
-            width="100" 
-            height="100" 
-            alt="Logo"
-          />
-          </Link>
-          <Link className="navbar-brand text-gold text-center col-6" to="/">
-            Home ฅ^•ﻌ•^ฅ
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+      <Navbar id="PawsNavbar" expand="lg md" className="row g-0 fixed-top">
+        <Container fluid>
+          <Navbar.Brand>
+            <Link to="/">
+              <img 
+                src={logo}
+                className="img-fluid" 
+                width="100" 
+                height="100" 
+                alt="Logo"
+              />
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Brand className="text-center col-6">
+            <Link className="text-gold" to="/">
+              Home ฅ^•ﻌ•^ฅ
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls={`offcanvasNavbar`} />
+          <Navbar.Offcanvas
+            id={`offcanvasNavbar`}
+            aria-labelledby={`offcanvasNavbarLabel`}
+            placement="end"
           >
-          <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav col-10">
-              <li className="nav-item col-6 text-center">
-                <Link className="nav-link text-gold" to="/Cats">
-                ⋆⭒˚ Cats
-                </Link>
-              </li>
-              <li className="nav-item col-6 text-center">
-                <Link className="nav-link text-gold" to="/Dogs">
-                Dogs ⋆⭒˚
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title id={`offcanvasNavbarLabel`}>
+                4Paws
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="col-12 text-center text-nowrap">
+                <Nav.Link 
+                  className="text-gold col-lg-6 col-md-6 col-12" 
+                  href={"/Cats/"}
+                >
+                  ⋆⭒˚ Cats
+                </Nav.Link>
+                <Nav.Link 
+                  className="text-gold col-lg-6 col-md-6 col-12" 
+                  href={"/Dogs/"}
+                >
+                  Dogs ⋆⭒˚
+                </Nav.Link>
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
     </>
   );
 }
