@@ -1,0 +1,191 @@
+body, html {
+    height: 100%;
+    background-color: #EAE0C8;
+}
+
+#PawsNavbar {
+    background-color: #FDDDE6;
+    max-height: 125px;
+    position: relative;
+}
+
+.text-gold {
+    color: #C7AE6A;
+    font-family: 'Times New Roman', monospace, serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: #FFFFFF 3px 1px;
+}
+
+#video {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.parallax {
+    background-image: url('images/CatParallaxImg.jpg');
+    height: 75vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: url('images/DogParallaxImg.webp');
+    height: 75vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    background-image: url('images/FormBackgroundImg.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transbox {
+    background-color: rgb(255, 255, 255, 0.3);
+    font-family: cursive;
+}
+
+.box {
+    --border-size: 5px;
+    background-image: conic-gradient(#e6e6e6, #ffffff, #e6e6e6), 
+        conic-gradient(#d5c28f, #b99a45);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-family: cursive;
+    color: #C7AE6A;
+    min-height: 50vh;
+    margin: 5px;
+    padding: 5px;
+}
+
+#myBtn {
+    background-color: #F6F6F6;
+    color: #C7AE6A;
+    border: #C7AE6A solid;
+    font-weight: bold;
+}
+
+#cardImg {
+    border-radius: 50%;
+    display: block;
+    height: 300px;
+    width: 300px;
+}
+
+#cardImg:hover {
+    filter: drop-shadow(8px 8px 10px #C7AE6A);
+	/* filter: invert(100%); */
+}
+
+#cardName {
+    color: #C7AE6A;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+#containerCat {
+    background-color: #E6E6E6;
+}
+
+#cardImgRS {
+    min-height: 50vh;
+    opacity: 0.8;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+#cardLS {
+    min-height: 50vh;
+    border-top-right-radius: 25vh;
+    border-bottom-left-radius: 25vh;
+    color: #986102;
+    font-family: cursive;
+    background-color: #FFFFFF;
+    padding-bottom: 15px;
+}
+
+#searchBar {
+    position: relative;
+    height: 40px;
+    border-radius: 100px;
+    padding: 17px;
+    color: gray;
+    background-image: url('images/SearchIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    outline: 0;
+}
+
+#containerDog {
+    background-color: #E6E6E6;
+}
+
+#cardImg2 {
+    border-radius: 5%;
+}
+
+
+#cardImg2:hover {
+    filter: drop-shadow(8px 8px 10px #000000);
+	/* filter: invert(100%); */
+}
+
+#cardItem {
+    font-family: 'Times New Roman', monospace, serif;
+    font-weight: bold;
+}
+
+#cardImgUS {
+    height: 100%;
+    opacity: 0.8;
+}
+
+#cardDS {
+    height: 100%;
+    color: #986102;
+    font-family: cursive;
+    position: relative;
+    border: 5px;
+}
+
+#cardContainer {
+    background-color: #EAE0C8;
+    padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    #cardImgRS {
+        height: 100%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    #cardLS {
+        height: 100%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    
+    #cardImgUS {
+        height: 100%;
+    }
+}
+
+#cardBg {
+    background-color: #FFFFFF;
+    padding-bottom: 10px;
+}
