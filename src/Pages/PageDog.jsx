@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams , Link } from "react-router-dom";
 import { Container, Row, Col, Card, Button, Table } from "react-bootstrap";
 // import { fonctionPromessesCat } from "../Controller";
 import { useState, useEffect } from "react";
@@ -169,11 +169,11 @@ export default function PageDog(props) {
             </Container>
 
             <footer className="row g-0 align-items-center text-center">
-                <a href="/Dogs" className="d-grid gap-2 text-decoration-none">
+                <Link to={"/Dogs/"} className="d-grid gap-2 text-decoration-none">
                     <Button id="myBtn">
                         ↤ Return to Previous Page ⇤
                     </Button>
-                </a>
+                </Link>
             </footer>
         </>
     );

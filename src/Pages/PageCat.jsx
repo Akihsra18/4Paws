@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 // import { fonctionPromessesCat } from "../Controller";
 import { useState, useEffect } from "react";
@@ -72,11 +72,11 @@ export default function PageCat(props) {
             </Container>
 
             <footer className="row g-0 align-items-end text-center">
-                <a href="/Cats" className="d-grid gap-2 text-decoration-none">
+                <Link to={"/Cats/"} className="d-grid gap-2 text-decoration-none">
                     <Button id="myBtn">
                         ↤ Return to Previous Page ⇤
                     </Button>
-                </a>
+                </Link>
             </footer>
         </>
     );
